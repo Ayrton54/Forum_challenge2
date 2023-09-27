@@ -1,8 +1,6 @@
 package br.com.Forum_challenge2.domain.topico;
 
 
-import br.com.Forum_challenge2.domain.curso.Curso;
-import br.com.Forum_challenge2.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -26,7 +24,7 @@ public class Topico {
     private LocalDateTime data = LocalDateTime.now();
 
     @Enumerated(EnumType.STRING)
-    private StatusTopico status ;
+    private StatusTopico status;
 
     private String autor;
     private String curso;
@@ -40,20 +38,20 @@ public class Topico {
         this.data = dados.data();
         this.autor = dados.autor();
         this.curso = dados.curso();
-        this.ativo =true;
+        this.ativo = true;
     }
 
     public void Atualizacao(DadosAtualizarTopico dados) {
-        if(dados.autor() != null){
+        if (dados.autor() != null) {
             this.autor = dados.autor();
         }
-        if (dados.titulo() != null){
+        if (dados.titulo() != null) {
             this.titulo = dados.titulo();
         }
-        if (dados.mensagem() != null){
+        if (dados.mensagem() != null) {
             this.mensagem = dados.mensagem();
         }
-        if (dados.curso() != null){
+        if (dados.curso() != null) {
             this.curso = dados.curso();
         }
     }

@@ -16,14 +16,10 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome ;
-    private String email;
+    private String login ;
+    
     private String senha;
 
 
-    public Usuario(Usuario dados) {
-        this.nome = dados.nome;
-
-
-    }
+   
 }
